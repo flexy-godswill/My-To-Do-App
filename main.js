@@ -1,7 +1,8 @@
 const userInput = document.getElementById("userInput");
 const addedTasks = document.getElementById("addedTasks");
 
-function createTask() {
+
+const createTask = () =>{
     if(userInput.value === ''){
         alert("Can't Add An Empty List\nPlease Click Ok And Try Again")
     } 
@@ -26,8 +27,7 @@ addedTasks.addEventListener("click", function(e) {
     }
 }, false);
 
-function saveData() {
+
+const saveData= () => {
     localStorage.setItem("data", addedTasks.innerHtml)
 }
-
-showList()
